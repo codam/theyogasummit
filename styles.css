@@ -57,13 +57,13 @@ body{
 	margin-bottom: 10px;
 }
 .title-tagline{
-	margin: 6px auto 12px auto;
+	margin: 6px auto 30px auto;
 	font-size: 1.1em;
 }
 .title-date{
-	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-bottom: 30px;
 	font-size: 1em;
-	height: 50px;
 }
 .waiting-list-widget{
 	margin-bottom: 30px;
