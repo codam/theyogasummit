@@ -1,1 +1,170 @@
-Hello World
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>The Yoga Summit</title>
+		<meta name="description" content="The Yoga Summit, a transformative online event, Oct 1st-31st 2016. One month of free daily yoga learning, practice, and community. October 1-31, 2016. Be healthier, happier, and more peaceful. The Yoga Summit is not-for-profit event with a mission to transform the world through yoga. Brought to you by the Global Yogis.">
+		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+		<!-- Social networks -->
+		<meta property="og:title" content="The Yoga Summit">
+		<meta property="og:image" content="http://theyogasummit.org/assets/Yoga-Flickr-Pravin_1200x628_Filter.jpg">
+		<meta property="og:description" content="The Yoga Summit, a transformative online event, Oct 1st-31st 2016. One month of free daily yoga learning, practice, and community. October 1-31, 2016. Be healthier, happier, and more peaceful. The Yoga Summit is not-for-profit event with a mission to transform the world through yoga. Brought to you by the Global Yogis.">
+		<meta property="og:url" content="http://theyogasummit.org">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="The Yoga Summit">
+		<meta name="twitter:description" content="The Yoga Summit, a transformative online event, Oct 1st-31st 2016. One month of free daily yoga learning, practice, and community. October 1-31, 2016. Be healthier, happier, and more peaceful. The Yoga Summit is not-for-profit event with a mission to transform the world through yoga. Brought to you by the Global Yogis.">
+		<meta name="twitter:url" content="http://theyogasummit.org">
+		<meta name="twitter:image" content="http://theyogasummit.org/assets/Yoga-Flickr-Pravin_1200x628_Filter.jpg">
+		<!-- <meta name="twitter:image" content="http://theyogasummit.org/assets/Yoga-Flickr-Pravin_600x600_Filter.jpg"> -->
+		<!-- Styles, fonts and scripts -->
+		<link href='./styles.css' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<!-- scripts containing the countdown & the dynamic text -->
+		<!-- <script src="https://maitreapp.co/assets/application-db035a85bbcab909e6789c63141923c52ba707eb669f734d810dffb3639ad2b7.js"></script> -->
+		<script src="./application-db035a85bbcab909e6789c63141923c52ba707eb669f734d810dffb3639ad2b7.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-78325432-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<script type="text/javascript">
+			var getDateEndOfWeek = function(){
+				// console.log('getDateEndOfWeek');
+				var todaysDay = (new Date(Date.now())).getUTCDay();
+
+				console.log(todaysDay);
+
+			}
+			// getDateEndOfWeek();
+
+			$(document).on('ready page:load', function () {
+				jQuery("#count_down_time").countdown(
+					'2016-07-10 23:59:59 UTC',
+					// getDateEndOfWeek(),
+					function(event) {
+						var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+						// $(this).text(event.strftime(totalHours + 'h %Mm %Ss until next 5 free all-inclusive passes'));
+						$(this).text(event.strftime(totalHours + 'h %Mm %Ss until the next 5 free all-inclusive passes are given away'));
+				});
+				$(".use_cases").typed({
+					strings: ["Be healthier^1000", "Be happier^1000", "Be more peaceful^1000" ],
+					typeSpeed: 100,
+					contentType: 'html',
+					loop: true
+			    });
+			    jQuery("#total_subs").prop('Counter',0).animate({
+			        Counter: 1044040
+			    }, {
+			        duration: 5000,
+			        easing: 'swing',
+			        step: function (now) {
+			            jQuery("#total_subs").text(numberWithCommas(Math.ceil(now)));
+			        }
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="background-image"></div>
+		<div class="shadow-overlay"></div>
+		<div class="main-container">
+			<section class="content">
+				<div class="logo"></div>
+				<div class="title-main">THE YOGA SUMMIT</div>
+				<div class="title-secondary">A Transformative Online Event</div>
+				<div class="title-third">One month of free daily yoga learning, practice, and community</div>
+				<!-- <div class="title-date">October 1-31, 2016</div> -->
+				<div class="title-date"></div>
+				<p class="title-tagline"> 
+					<span class="use_cases"></span>
+				</p>
+				<section id="signup-section">
+					<div class="signup-label">Sign up now, and win a full access pass!</div>
+					<!-- <div id="count_down_time"></div> -->
+					<div class="waiting-list-widget">
+						<script type="text/javascript">
+							window.submitButtonLabel = 'GET MY FREE ACCESS';
+							window.Maitre = {
+								uuid: "MFfdd2b61de5",
+								host: "http://theyogasummit.org",
+								// test_mode: true,
+								labels: {
+									submit_button: submitButtonLabel
+								},
+								callbacks: {
+									afterLoad: function(data, form) {
+										// create close popup button and attach it to the popup
+										var closeButton = '<button class="close-popup">×</button>';
+										var div = document.createElement('div');
+										div.innerHTML = closeButton;
+										var closeButtonNode = div.firstChild;
+										closeButtonNode.onclick = function() {
+											$('[data-maitre-content]').toggleClass("show");
+											$('[data-maitre-content]').toggleClass("hide");
+											$('[data-maitre-form]').toggleClass("hide");
+											$('[data-maitre-form]').toggleClass("show");
+											// $('[data-maitre-verification]').toggleClass("hide");
+											// $('[data-maitre-verification]').toggleClass("show");
+											$('[data-maitre-submit-button]').removeAttr('disabled');
+											$('[data-maitre-submit-button').text(submitButtonLabel);
+
+										};
+										var maitreWidgetContainer = document.querySelector("[data-maitre-content]");
+										maitreWidgetContainer.appendChild(closeButtonNode);
+									},
+									afterSuccess: function(data, form) {
+										window.scrollTo(0,0);
+										
+										// Google Analytics event tracking
+										if (data.response == "subscriber_created") {
+											ga('send', 'event', 'Form', 'signup', 'Waiting List');
+										}
+
+										// Not needed anymore - change the url of the social links which are linked to http://raphael.harmel.free.fr/TYS to http://theyogasummit.org
+										
+										// var oldContentEncoded = encodeURIComponent("raphael.harmel.free.fr/TYS");
+										// var newContentEncoded = encodeURIComponent("theyogasummit.org");
+										// var array = ['facebook','twitter','whatsapp','email'];
+										// for (i = 0; i < array.length; i++) {
+										// 	var nodeDataAttribute = '[data-maitre-social-' + array[i] + ']';
+										// 	$(nodeDataAttribute).attr("href", $(nodeDataAttribute).attr("href").replace(oldContentEncoded,newContentEncoded));
+										// }
+									}
+								}
+							};
+						</script>
+						<script data-maitre src='https://maitreapp.co/widget.js' async></script>
+					</div>
+				</section>
+			</section>
+			<section class="footer">
+				<section class="social" style="visibility: visible;">
+					<a class="facebook" href="https://www.facebook.com/globalyogis" target="_blank">
+						<i class="fa fa-facebook-square fa-3x"></i>
+					</a>
+					<a class="instagram" href="https://instagram.com/globalyogis" target="_blank">
+						<i class="fa fa-instagram fa-3x"></i>
+					</a>
+					<a class="twitter" href="https://www.twitter.com/global_yogis" target="_blank">
+						<i class="fa fa-twitter-square fa-3x"></i>
+					</a>
+				</section>
+				<section class="footer-text">
+					<div>The Yoga Summit is on a mission to transform the world through yoga.</div>
+					<span class="footer-text1">Brought to you by the </span><span class="footer-text2">Global Yogis</span>
+				</section>
+			</section>
+		</div>
+	</body>
+</html>
